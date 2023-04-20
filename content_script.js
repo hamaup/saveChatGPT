@@ -149,11 +149,12 @@ function formatConversationData(conversationData, format) {
         // コードブロックをMarkdown形式に変換し、HTMLタグを除去する
         let replacedValue = item.value.replace(regex, "\n```$1\n$2\n```\n");
         replacedValue = replacedValue.replace(/<\/?[^>]+(>|$)/g, "");
+        valueDecoded = replaceHtmlEntities(replacedValue);
         // 人間かGPTかに応じて、"**"で囲って出力するかどうかを判断して、整形データに追加
         if (item.from) {
-          formattedData += `**${item.from.toUpperCase()}**: ${replacedValue}\n\n`;
+          formattedData += `**${item.from.toUpperCase()}**: ${valueDecoded}\n\n`;
         } else {
-          formattedData += `${replacedValue}\n\n`;
+          formattedData += `${valueDecoded}\n\n`;
         }
       }
       // 最後に改行を除去する
