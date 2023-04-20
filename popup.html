@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ChatGPT会話保存</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 20px;
+      }
+      h1 {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+      }
+      label {
+        font-size: 10px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      select {
+        font-size: 14px;
+        padding: 5px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .format-save-button {
+        font-size: 14px;
+        padding: 5px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .format-save-button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ChatGPT会話保存</h1>
+    <label for="file-format">ファイル形式を選択してください:</label>
+    <select id="file-format">
+      <option value="text">テキスト</option>
+      <option value="csv">CSV</option>
+      <option value="md">マークダウン</option>
+      <option value="html">HTML</option>
+    </select>
+    <button id="format-save-button">保存</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

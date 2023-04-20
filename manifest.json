@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT会話保存",
+  "version": "1.0",
+  "description": "Save ChatGPT conversations locally in text, csv, markdown or HTML format.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
